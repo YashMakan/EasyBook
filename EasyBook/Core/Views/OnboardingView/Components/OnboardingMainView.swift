@@ -9,8 +9,7 @@ import SwiftUI
 
 struct OnboardingMainView: View {
     let page: OnboardingPage
-    let screenHeight = UIScreen.main.bounds.size.height
-    let screenWidth = UIScreen.main.bounds.size.width
+    @EnvironmentObject var screen: ScreenResolution
     @EnvironmentObject var onboardingViewModel: OnboardingViewModel
     
     var body: some View {
@@ -19,7 +18,7 @@ struct OnboardingMainView: View {
                 Spacer()
                 Image(page.imageName)
                     .resizable()
-                    .frame(width: screenWidth * 0.75, height: screenHeight * 0.5)
+                    .frame(width: screen.w * 0.75, height: screen.h * 0.5)
                     .aspectRatio(contentMode: .fit)
             } else {
                 OnboardingPage3View()

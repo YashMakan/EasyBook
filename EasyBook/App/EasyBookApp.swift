@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct EasyBookApp: App {
+    @StateObject var screen: ScreenResolution = ScreenResolution.fromUiBounds()
+    
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            HomeView()
+                .environmentObject(screen)
         }
     }
 }

@@ -9,6 +9,6 @@ struct OnboardingView: View {
                 IndicatorView()
             }.environmentObject(OnboardingViewModel())
                 .edgesIgnoringSafeArea(.all)
-        }
+        }.navigationBarBackButtonHidden()
     }
 }

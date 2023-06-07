@@ -33,7 +33,7 @@ struct SplashView: View {
                     }
                 }
             )
-        }
+        }.navigationBarBackButtonHidden()
     }
 }
 

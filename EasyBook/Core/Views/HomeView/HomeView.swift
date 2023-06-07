@@ -8,38 +8,29 @@
 import SwiftUI
 
 struct HomeView: View {
-    let screenHeight = UIScreen.main.bounds.size.height
-    let screenWidth = UIScreen.main.bounds.size.width
+    @ObservedObject var homeViewModel: HomeViewModel = HomeViewModel()
+    @EnvironmentObject var screen: ScreenResolution
     
     var body: some View {
         ZStack {
             Image("onboard_3")
                 .resizable()
-                .frame(width: screenWidth * 1.4, height: screenHeight * 0.75)
-                .position(x: screenWidth / 3, y: screenHeight * 0.24)
+                .frame(width: screen.w * 1.4, height: screen.h * 0.75)
+                .position(x: screen.w / 3, y: screen.h * 0.24)
                 .rotationEffect(.degrees(10))
             
-            VStack {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .padding(.leading, 16)
-                        .foregroundColor(.white)
-                    Spacer()
-                    Image("logo")
-                        .resizable()
-                        .frame(width: 28, height: 34)
-                    Text("EASY BOOK")
-                    Spacer()
-                    Image(systemName: "magnifyingglass")
-                        .resizable()
-                        .frame(width: 24, height: 24)
-                        .padding(.trailing, 16)
-                }
-                Spacer()
-            }
+            HomeViewNavigationView()
+            
+            CurrentReadingBookView()
+            
+            PopularBooksView()
+            
         }
+        .navigationBarBackButtonHidden()
+        .onAppear {
+            homeViewModel.getTrendingBooks()
+        }
+        .environmentObject(homeViewModel)
     }
 }
 
