@@ -38,7 +38,18 @@ class ApiCore {
             .responseData { response in
                 switch response.result {
                 case .success(let data):
-                    completion(.success(data))
+                    do {
+                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                            let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+                            if let jsonString = String(data: jsonData, encoding: .utf8) {
+                                print("Response JSON: \(jsonString)")
+                            }
+                        }
+                        
+                        completion(.success(data))
+                    } catch {
+                        completion(.failure(error))
+                    }
                 case .failure(let error):
                     completion(.failure(error))
                 }

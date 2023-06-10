@@ -41,6 +41,8 @@
 		804611642A288F4100FBFAD4 /* OnboardingPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804611632A288F4100FBFAD4 /* OnboardingPageModel.swift */; };
 		804611672A288FD500FBFAD4 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804611662A288FD500FBFAD4 /* IndicatorView.swift */; };
 		8046116A2A2890C300FBFAD4 /* OnboardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804611692A2890C300FBFAD4 /* OnboardingMainView.swift */; };
+		80CC5A232A34433B002C7075 /* YouMightLikeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CC5A222A34433B002C7075 /* YouMightLikeListView.swift */; };
+		80CC5A252A34444F002C7075 /* YouMightLikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CC5A242A34444F002C7075 /* YouMightLikeView.swift */; };
 		80DB92952A29CA1D00EB811E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB92942A29CA1D00EB811E /* SplashViewModel.swift */; };
 		80DB92982A29CE1700EB811E /* BackgroundBlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB92972A29CE1700EB811E /* BackgroundBlobView.swift */; };
 		80DB929A2A29CE6800EB811E /* LogoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB92992A29CE6800EB811E /* LogoDetailsView.swift */; };
@@ -107,6 +109,8 @@
 		804611632A288F4100FBFAD4 /* OnboardingPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageModel.swift; sourceTree = "<group>"; };
 		804611662A288FD500FBFAD4 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		804611692A2890C300FBFAD4 /* OnboardingMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMainView.swift; sourceTree = "<group>"; };
+		80CC5A222A34433B002C7075 /* YouMightLikeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouMightLikeListView.swift; sourceTree = "<group>"; };
+		80CC5A242A34444F002C7075 /* YouMightLikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouMightLikeView.swift; sourceTree = "<group>"; };
 		80DB92942A29CA1D00EB811E /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		80DB92972A29CE1700EB811E /* BackgroundBlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBlobView.swift; sourceTree = "<group>"; };
 		80DB92992A29CE6800EB811E /* LogoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoDetailsView.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				8009CDEC2A306B910045CC58 /* PopuplarBooksView.swift */,
 				8009CDF02A30720D0045CC58 /* HomeViewNavigationView.swift */,
 				8009CDF22A3074B60045CC58 /* CurrentReadingBookView.swift */,
+				80CC5A222A34433B002C7075 /* YouMightLikeListView.swift */,
+				80CC5A242A34444F002C7075 /* YouMightLikeView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -531,6 +537,7 @@
 				804611642A288F4100FBFAD4 /* OnboardingPageModel.swift in Sources */,
 				80DB92982A29CE1700EB811E /* BackgroundBlobView.swift in Sources */,
 				8009CDED2A306B910045CC58 /* PopuplarBooksView.swift in Sources */,
+				80CC5A232A34433B002C7075 /* YouMightLikeListView.swift in Sources */,
 				8043CDAB2A2F47C100C31425 /* Api.swift in Sources */,
 				8033A5E02A2F46FA00605C74 /* ApiPath.swift in Sources */,
 				8043CDC62A2F4C4E00C31425 /* PanelizationSummary.swift in Sources */,
@@ -551,6 +558,7 @@
 				80DB929A2A29CE6800EB811E /* LogoDetailsView.swift in Sources */,
 				804611672A288FD500FBFAD4 /* IndicatorView.swift in Sources */,
 				80DB92A52A29D51800EB811E /* OnboardingViewModel.swift in Sources */,
+				80CC5A252A34444F002C7075 /* YouMightLikeView.swift in Sources */,
 				8043CDCA2A2F4C4E00C31425 /* Epub.swift in Sources */,
 				8043CDCD2A2F4C4E00C31425 /* ImageLinks.swift in Sources */,
 				8043CDB22A2F4AEA00C31425 /* ApiProtocol.swift in Sources */,

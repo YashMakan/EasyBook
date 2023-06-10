@@ -13,4 +13,8 @@ class ApiPath {
     static var trendingBooks: String = "trending-books"
     
     static var searchBooks: String = "search-books"
+    
+    static var weeklyTrendingBook: String = "weekly-trending-books"
+    
+    static var youMightLikeBooks: String = "you-might-like-books"
 }

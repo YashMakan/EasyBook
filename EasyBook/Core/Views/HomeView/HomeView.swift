@@ -25,10 +25,14 @@ struct HomeView: View {
             
             PopularBooksView()
             
+            Spacer()
+            
         }
         .navigationBarBackButtonHidden()
         .onAppear {
+            homeViewModel.getWeekBook()
             homeViewModel.getTrendingBooks()
+            homeViewModel.getYouMightLikeBooks()
         }
         .environmentObject(homeViewModel)
     }

@@ -36,11 +36,12 @@ struct PopularBooksView: View {
                     }
                 }
             }
-            Spacer()
+            Spacer().frame(height: 16)
+            YouMightLikeListView()
         }
         .frame(width: screen.w, height: 140)
         .padding(.leading, 32)
-        .position(x: screen.w / 2, y: homeViewModel.isBookReadingInProgress ? screen.h * 0.42 : screen.h * 0.2)
+        .position(x: screen.w / 2, y: homeViewModel.isBookReadingInProgress ? screen.h * 0.62 : screen.h * 0.45)
     }
 }
 

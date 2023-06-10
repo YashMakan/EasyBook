@@ -33,4 +33,40 @@ class Api: ApiProtocol {
             }
         }
     }
+    
+    func getWeekBook(completion: @escaping (Result<Book?, Error>) -> Void) {
+        webService.get(endpoint: ApiPath.weeklyTrendingBook) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let response = try decoder.decode(BookResponse.self, from: data)
+                    completion(.success(response.result.first))
+                } catch {
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func getYouMightLikeBooks(completion: @escaping (Result<[Book], Error>) -> Void) {
+        webService.get(endpoint: ApiPath.youMightLikeBooks) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let response = try decoder.decode(BookResponse.self, from: data)
+                    completion(.success(response.result))
+                } catch {
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

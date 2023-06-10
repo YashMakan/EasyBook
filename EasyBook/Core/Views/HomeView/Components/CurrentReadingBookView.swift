@@ -14,14 +14,14 @@ struct CurrentReadingBookView: View {
     var body: some View {
         VStack {
             HStack {
-                BookBannerView(imageURL: nil)
+                BookBannerView(imageURL: homeViewModel.weekBook?.volumeInfo?.imageLinks?.thumbnail)
                 Spacer().frame(width: 12)
                 VStack(alignment: .leading) {
                     Spacer().frame(height: 4)
-                    Text("The Psychology of Money")
+                    Text(homeViewModel.weekBook?.volumeInfo?.title ?? "")
                         .font(.system(size: 14))
                     Spacer().frame(height: 12)
-                    Text("The psychology of money is the study of our behavior with money. Success with money isn't about knowledge, IQ or how good you are at math. It's about behavior, and everyone is prone to certain behaviors over others.")
+                    Text(homeViewModel.weekBook?.volumeInfo?.description ?? "")
                         .font(.system(size: 10, weight: .light))
                         .foregroundColor(.gray)
                     Spacer()
