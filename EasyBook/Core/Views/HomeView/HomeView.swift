@@ -12,27 +12,29 @@ struct HomeView: View {
     @EnvironmentObject var screen: ScreenResolution
     
     var body: some View {
-        ZStack {
-            Image("onboard_3")
-                .resizable()
-                .frame(width: screen.w * 1.4, height: screen.h * 0.75)
-                .position(x: screen.w / 3, y: screen.h * 0.24)
-                .rotationEffect(.degrees(10))
-            
-            HomeViewNavigationView()
-            
-            CurrentReadingBookView()
-            
-            PopularBooksView()
-            
-            Spacer()
-            
-        }
-        .navigationBarBackButtonHidden()
-        .onAppear {
-            homeViewModel.getWeekBook()
-            homeViewModel.getTrendingBooks()
-            homeViewModel.getYouMightLikeBooks()
+        NavigationView {
+            ZStack {
+                Image("onboard_3")
+                    .resizable()
+                    .frame(width: screen.w * 1.4, height: screen.h * 0.75)
+                    .position(x: screen.w / 3, y: screen.h * 0.24)
+                    .rotationEffect(.degrees(10))
+                
+                HomeViewNavigationView()
+                
+                CurrentReadingBookView()
+                
+                PopularBooksView()
+                
+                Spacer()
+                
+            }
+            .navigationBarBackButtonHidden()
+            .onAppear {
+                homeViewModel.getWeekBook()
+                homeViewModel.getTrendingBooks()
+                homeViewModel.getYouMightLikeBooks()
+            }
         }
         .environmentObject(homeViewModel)
     }

@@ -10,9 +10,21 @@ import Foundation
 class Api: ApiProtocol {
     let webService: ApiCore = ApiCore.shared
     
-    func getSearchResults(query: String, completion: @escaping (Result<Data, Error>) -> Void) {
-        webService.post(endpoint: ApiPath.trendingBooks, parameters: ["search": query]) { result in
-            completion(result)
+    func getSearchResults(query: String, startIndex: Int, completion: @escaping (Result<[Book], Error>) -> Void) {
+        webService.post(endpoint: ApiPath.searchBooks, parameters: ["search": query, "startIndex": startIndex]) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let response = try decoder.decode(BookResponse.self, from: data)
+                    completion(.success(response.result))
+                } catch {
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
     

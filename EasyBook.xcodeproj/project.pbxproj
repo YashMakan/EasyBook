@@ -53,6 +53,7 @@
 		80DB92A52A29D51800EB811E /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB92A42A29D51800EB811E /* OnboardingViewModel.swift */; };
 		80DB92A72A29E97C00EB811E /* OnmboardingPage3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB92A62A29E97C00EB811E /* OnmboardingPage3View.swift */; };
 		80DB92A92A29FD0100EB811E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB92A82A29FD0100EB811E /* HomeView.swift */; };
+		80F9EBA42A37081000ACBDD9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9EBA32A37081000ACBDD9 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		80DB92A42A29D51800EB811E /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		80DB92A62A29E97C00EB811E /* OnmboardingPage3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnmboardingPage3View.swift; sourceTree = "<group>"; };
 		80DB92A82A29FD0100EB811E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		80F9EBA32A37081000ACBDD9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 		804611542A28862600FBFAD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				80F9EBA22A37080100ACBDD9 /* SearchView */,
 				804611552A28862C00FBFAD4 /* SplashView */,
 				804611562A28863400FBFAD4 /* OnboardingView */,
 				804611572A28864600FBFAD4 /* HomeView */,
@@ -395,6 +398,14 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		80F9EBA22A37080100ACBDD9 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				80F9EBA32A37081000ACBDD9 /* SearchView.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -540,6 +551,7 @@
 				80CC5A232A34433B002C7075 /* YouMightLikeListView.swift in Sources */,
 				8043CDAB2A2F47C100C31425 /* Api.swift in Sources */,
 				8033A5E02A2F46FA00605C74 /* ApiPath.swift in Sources */,
+				80F9EBA42A37081000ACBDD9 /* SearchView.swift in Sources */,
 				8043CDC62A2F4C4E00C31425 /* PanelizationSummary.swift in Sources */,
 				80DB929D2A29CF4500EB811E /* SplashViewBackgroundModifier.swift in Sources */,
 				8043CDCC2A2F4C4E00C31425 /* AccessInfo.swift in Sources */,

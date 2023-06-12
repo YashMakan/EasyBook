@@ -25,7 +25,7 @@ struct YouMightLikeListView: View {
                     VStack {
                         if homeViewModel.youMightLikeBooks.isEmpty {
                             ForEach(0..<5) { _ in
-                                ShimmerView()
+                                ShimmerView(width: screen.w * 0.9, height: screen.h * 0.12)
                             }
                         }
                         else {

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ApiProtocol {
-    func getSearchResults(query: String, completion: @escaping (Result<Data, Error>) -> Void)
+    func getSearchResults(query: String, startIndex: Int, completion: @escaping (Result<[Book], Error>) -> Void)
     
     func getTrendingBooks(completion: @escaping (Result<[Book], Error>) -> Void)
 }

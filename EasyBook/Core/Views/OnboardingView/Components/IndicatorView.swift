@@ -33,7 +33,7 @@ struct IndicatorView: View {
                     }
                     .buttonStyle(RoundedButtonStyle())
                     .opacity(opacity)
-                    .animation(.easeInOut(duration: 0.5))
+//                    .animation(.easeInOut(duration: 0.5))
                     .transition(.opacity)
                     .onAppear {
                         opacity = 1

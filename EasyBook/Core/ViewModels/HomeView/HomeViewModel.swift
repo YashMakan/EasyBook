@@ -10,9 +10,14 @@ import Foundation
 class HomeViewModel: ObservableObject {
     @Published var trendingBooks: [Book] = []
     @Published var youMightLikeBooks: [Book] = []
+    @Published var searchResults: [Book] = []
     @Published var weekBook: Book?
+    
     var apiService: Api = Api()
+    
     @Published var isBookReadingInProgress = true;
+    @Published var isLoaded: Bool = false
+    @Published var pageIndex: Int = 0
     
     func getTrendingBooks() {
         apiService.getTrendingBooks() { result in
@@ -41,6 +46,20 @@ class HomeViewModel: ObservableObject {
             switch result {
             case .success(let books):
                 self.youMightLikeBooks = books
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func searchBooks(query: String) {
+        print("SEARCHING/.///")
+        apiService.getSearchResults(query: query, startIndex: pageIndex) { result in
+            switch result {
+            case .success(let books):
+                self.searchResults.append(contentsOf: books)
+                self.pageIndex += 1
+                self.isLoaded = true
             case .failure(let error):
                 print(error)
             }

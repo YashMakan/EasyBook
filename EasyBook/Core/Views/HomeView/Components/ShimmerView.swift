@@ -8,12 +8,14 @@ import SwiftUI
 
 struct ShimmerView: View {
     @State private var isAnimating = false
+    var width: Double = 100
+    var height: Double = 140
     
     var body: some View {
         Rectangle()
             .fill(Color.gray.opacity(0.3))
             .cornerRadius(5)
-            .frame(width: 100, height: 140)
+            .frame(width: width, height: height)
             .opacity(0.8)
 //            .overlay(
 //                RoundedRectangle(cornerRadius: 5)
